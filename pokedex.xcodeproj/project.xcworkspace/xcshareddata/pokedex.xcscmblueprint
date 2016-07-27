@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4EA414FE54EEEE689E2960454D418EE2F683D32F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4EA414FE54EEEE689E2960454D418EE2F683D32F" : 0,
+    "809B2478AE43339739342A42D7D727F4DA1025CE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "637E0BBF-D658-4CBA-BBFC-EB97BDF38879",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4EA414FE54EEEE689E2960454D418EE2F683D32F" : "pokemonapi_avfound_customui_iOSAPP-master%20copy\/",
+    "809B2478AE43339739342A42D7D727F4DA1025CE" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pokedex",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pokedex.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danra2\/Poked_iOS_Application_Hackathon.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EA414FE54EEEE689E2960454D418EE2F683D32F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danra2\/HospitalFinderiOSApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809B2478AE43339739342A42D7D727F4DA1025CE"
+    }
+  ]
+}
