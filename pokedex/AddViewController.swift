@@ -69,13 +69,13 @@ class AddViewController: SplashViewController, UIPickerViewDelegate, UIPickerVie
     }
     func buttonEffect() {
         if (addButton != nil) {
-            addButton.layer.shadowColor = UIColor.blackColor().CGColor
-            addButton.layer.shadowOpacity = 1
-            addButton.layer.shadowOffset = CGSizeZero
-            addButton.layer.shadowRadius = 10
-            addButton.alpha = 0
+//            addButton.layer.shadowColor = UIColor.blackColor().CGColor
+//            addButton.layer.shadowOpacity = 1
+//            addButton.layer.shadowOffset = CGSizeZero
+//            addButton.layer.shadowRadius = 10
+//            addButton.alpha = 0
             
-            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            UIView.animateWithDuration(3.3, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.addButton.alpha = 1
                 }, completion: nil)
         }

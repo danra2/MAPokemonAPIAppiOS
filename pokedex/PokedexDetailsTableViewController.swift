@@ -21,10 +21,6 @@ class PokedexDetailsTableViewController: UITableViewController {
     var height: String!
     var experience: String!
     
-
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getPokemons()

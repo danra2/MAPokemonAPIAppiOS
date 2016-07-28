@@ -60,13 +60,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     func buttonEffect() {
         if (addButton != nil) {
-            addButton.layer.shadowColor = UIColor.blackColor().CGColor
-            addButton.layer.shadowOpacity = 1
-            addButton.layer.shadowOffset = CGSizeZero
-            addButton.layer.shadowRadius = 10
-            addButton.alpha = 0
+//            addButton.layer.shadowColor = UIColor.blackColor().CGColor
+//            addButton.layer.shadowOpacity = 1
+//            addButton.layer.shadowOffset = CGSizeZero
+//            addButton.layer.shadowRadius = 10
+//            addButton.alpha = 0
             
-            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            UIView.animateWithDuration(3.3, delay: 0.3, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.addButton.alpha = 1
                 }, completion: nil)
         }
@@ -141,7 +141,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var label: UILabel!
     @IBAction func addPokemonButton(sender: UIButton) {
-        label.text = currentLat + "Successfully saved location at , " + currentLong
+        label.text = "Successfully saved location at " + currentLat + ", " + currentLong
         
 //        let pokemonLat:CLLocationDegrees = Double(currentLat)!
 //        let pokemonLong:CLLocationDegrees = Double(currentLong)!
@@ -220,7 +220,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //                print(pokemon.valueForKey("index")!)
 //                print(self.indexForPin)
                 if annotation.title!! == String(pokemon.valueForKey("name")!) {
-                    self.indexForPin = pokemon.valueForKey("index")! as! Int
+                    self.indexForPin = pokemon.valueForKey("index")! as? Int
 //                    print(self.indexForPin!)
                 }
             }

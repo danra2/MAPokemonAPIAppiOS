@@ -37,18 +37,18 @@ class SplashViewController: UIViewController {
     }
     func displayEffects() {
         if (checkButton != nil) {
-            checkButton.layer.shadowColor = UIColor.blackColor().CGColor
-            checkButton.layer.shadowOpacity = 1
-            checkButton.layer.shadowOffset = CGSizeZero
-            checkButton.layer.shadowRadius = 10
+//            checkButton.layer.shadowColor = UIColor.blackColor().CGColor
+//            checkButton.layer.shadowOpacity = 1
+//            checkButton.layer.shadowOffset = CGSizeZero
+//            checkButton.layer.shadowRadius = 10
             
-            pokedexButton.layer.shadowColor = UIColor.blackColor().CGColor
-            pokedexButton.layer.shadowOpacity = 1
-            pokedexButton.layer.shadowOffset = CGSizeZero
-            pokedexButton.layer.shadowRadius = 10
-            pokedexButton.alpha = 0
+//            pokedexButton.layer.shadowColor = UIColor.blackColor().CGColor
+//            pokedexButton.layer.shadowOpacity = 1
+//            pokedexButton.layer.shadowOffset = CGSizeZero
+//            pokedexButton.layer.shadowRadius = 10
+//            pokedexButton.alpha = 0
             
-            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            UIView.animateWithDuration(3.3, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 self.pokedexButton.alpha = 1
                 }, completion: nil)
         }

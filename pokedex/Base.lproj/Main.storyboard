@@ -247,18 +247,19 @@
                                 <rect key="frame" x="-3" y="133" width="417" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="ieE-9m-3xq"/>
-                                    <constraint firstAttribute="height" constant="210" id="wNV-rw-z1I"/>
+                                    <constraint firstAttribute="height" constant="150" id="wNV-rw-z1I"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-gV-I4X">
-                                <rect key="frame" x="59" y="549" width="295" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-gV-I4X">
+                                <rect key="frame" x="-131" y="527" width="676" height="74"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Dpr-We-bKK"/>
+                                    <constraint firstAttribute="width" secondItem="uNr-gV-I4X" secondAttribute="height" multiplier="338:37" id="KG6-vn-rGY"/>
                                     <constraint firstAttribute="height" constant="40" id="iz7-Ay-OVS"/>
                                     <constraint firstAttribute="width" constant="300" id="q2n-tD-EMN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="   Add Pokemon   ">
+                                <state key="normal" title="   Add Pokemon   " image="addpokemonbutton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -297,7 +298,7 @@
                             <constraint firstItem="eux-zL-LN2" firstAttribute="centerX" secondItem="XxH-YQ-Ufq" secondAttribute="centerX" id="3TK-AB-v6c"/>
                             <constraint firstItem="mjC-rU-gv4" firstAttribute="leading" secondItem="0qB-YS-Fq1" secondAttribute="leadingMargin" id="8vU-Ax-tFd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ufm-wH-8c2" secondAttribute="trailing" constant="-30" id="I8U-t8-Ayg"/>
-                            <constraint firstItem="NKX-bs-sJR" firstAttribute="top" secondItem="uNr-gV-I4X" secondAttribute="bottom" constant="44" id="IRI-RQ-jiX"/>
+                            <constraint firstItem="NKX-bs-sJR" firstAttribute="top" secondItem="uNr-gV-I4X" secondAttribute="bottom" constant="60" id="IRI-RQ-jiX"/>
                             <constraint firstItem="mjC-rU-gv4" firstAttribute="centerX" secondItem="uNr-gV-I4X" secondAttribute="centerX" id="JdV-Ha-uTU"/>
                             <constraint firstItem="eux-zL-LN2" firstAttribute="centerY" secondItem="0qB-YS-Fq1" secondAttribute="centerY" id="KW0-Z1-f61"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NKX-bs-sJR" secondAttribute="trailing" constant="99" id="LJb-e2-S3T"/>
@@ -471,26 +472,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuc-sf-0Da">
-                                <rect key="frame" x="20" y="72" width="374" height="359"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuc-sf-0Da">
+                                <rect key="frame" x="20" y="72" width="374" height="408"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3T-8i-tln">
-                                <rect key="frame" x="20" y="89" width="374" height="109"/>
+                                <rect key="frame" x="20" y="73" width="374" height="109"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6K-0v-7PP">
-                                <rect key="frame" x="82" y="439" width="250" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Add Location">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addPokemonButton:" destination="hIN-nA-ozG" eventType="touchUpInside" id="oOO-zd-vk6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CP Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4i-tL-ZoT">
                                 <rect key="frame" x="159" y="658" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -506,30 +496,62 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sL5-tJ-zUx">
                                 <rect key="frame" x="133" y="528" width="149" height="127"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="4BN-gc-Gn0"/>
+                                    <constraint firstAttribute="height" constant="260" id="4BN-gc-Gn0"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6K-0v-7PP">
+                                <rect key="frame" x="25" y="453" width="365" height="63"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h6K-0v-7PP" secondAttribute="height" multiplier="321:37" id="ada-BT-GJm"/>
+                                    <constraint firstAttribute="width" constant="280" id="rI5-es-0jy"/>
+                                </constraints>
+                                <state key="normal" image="addlocationbutton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPokemonButton:" destination="hIN-nA-ozG" eventType="touchUpInside" id="oOO-zd-vk6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b3T-8i-tln" firstAttribute="centerY" secondItem="TWO-xQ-gkK" secondAttribute="centerY" id="4of-fm-NrY"/>
+                            <constraint firstItem="h6K-0v-7PP" firstAttribute="top" secondItem="tuc-sf-0Da" secondAttribute="bottom" constant="30" id="0kd-ZT-cGm"/>
                             <constraint firstItem="fTj-50-iis" firstAttribute="top" secondItem="sL5-tJ-zUx" secondAttribute="bottom" constant="-36" id="F7r-F1-eLJ"/>
                             <constraint firstItem="h6K-0v-7PP" firstAttribute="centerX" secondItem="TWO-xQ-gkK" secondAttribute="centerX" id="G8p-RE-588"/>
+                            <constraint firstItem="h6K-0v-7PP" firstAttribute="leading" secondItem="tuc-sf-0Da" secondAttribute="leading" id="H41-eY-WIn"/>
                             <constraint firstItem="v4i-tL-ZoT" firstAttribute="top" secondItem="fTj-50-iis" secondAttribute="bottom" constant="1" id="KXT-0R-u11"/>
+                            <constraint firstItem="h6K-0v-7PP" firstAttribute="top" secondItem="tuc-sf-0Da" secondAttribute="bottom" constant="30" id="LWd-9t-Wdh"/>
                             <constraint firstItem="v4i-tL-ZoT" firstAttribute="top" secondItem="fTj-50-iis" secondAttribute="bottom" constant="66" id="Lf5-ws-ne7"/>
                             <constraint firstItem="tuc-sf-0Da" firstAttribute="leading" secondItem="TWO-xQ-gkK" secondAttribute="leadingMargin" id="Nip-dd-l8G"/>
                             <constraint firstItem="h6K-0v-7PP" firstAttribute="top" secondItem="tuc-sf-0Da" secondAttribute="bottom" constant="8" id="Svo-VY-pvs"/>
                             <constraint firstItem="b3T-8i-tln" firstAttribute="top" secondItem="A2C-eK-tvH" secondAttribute="bottom" constant="25" id="TJw-gi-5PZ"/>
                             <constraint firstItem="v4i-tL-ZoT" firstAttribute="centerX" secondItem="TWO-xQ-gkK" secondAttribute="centerX" id="YVt-ZV-DDc"/>
+                            <constraint firstItem="sL5-tJ-zUx" firstAttribute="top" secondItem="h6K-0v-7PP" secondAttribute="bottom" constant="22" id="Yef-iz-DFC"/>
                             <constraint firstItem="yJH-An-pyn" firstAttribute="top" secondItem="v4i-tL-ZoT" secondAttribute="bottom" constant="8" id="bRH-sx-Rzk"/>
                             <constraint firstItem="fTj-50-iis" firstAttribute="centerX" secondItem="TWO-xQ-gkK" secondAttribute="centerX" id="cFx-c3-k2S"/>
                             <constraint firstItem="b3T-8i-tln" firstAttribute="centerX" secondItem="TWO-xQ-gkK" secondAttribute="centerX" id="e0e-Xd-bTP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h6K-0v-7PP" secondAttribute="trailing" constant="-134" id="eVQ-lD-LAF"/>
+                            <constraint firstItem="sL5-tJ-zUx" firstAttribute="top" secondItem="h6K-0v-7PP" secondAttribute="bottom" constant="1" id="hke-aF-F2l"/>
                             <constraint firstItem="sL5-tJ-zUx" firstAttribute="centerX" secondItem="TWO-xQ-gkK" secondAttribute="centerX" id="jm8-Ij-0iu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h6K-0v-7PP" secondAttribute="trailing" constant="4" id="m89-0p-Z4a"/>
                             <constraint firstItem="h6K-0v-7PP" firstAttribute="top" secondItem="tuc-sf-0Da" secondAttribute="bottom" constant="8" id="mao-wG-8JS"/>
+                            <constraint firstItem="h6K-0v-7PP" firstAttribute="leading" secondItem="TWO-xQ-gkK" secondAttribute="leadingMargin" constant="-134" id="nHy-Fu-Mjb"/>
+                            <constraint firstItem="h6K-0v-7PP" firstAttribute="leading" secondItem="TWO-xQ-gkK" secondAttribute="leadingMargin" constant="20" id="nWN-Yx-5qg"/>
                             <constraint firstItem="tuc-sf-0Da" firstAttribute="trailing" secondItem="TWO-xQ-gkK" secondAttribute="trailingMargin" id="q86-PO-h1J"/>
                             <constraint firstItem="tuc-sf-0Da" firstAttribute="top" secondItem="A2C-eK-tvH" secondAttribute="bottom" constant="8" id="rXV-kR-T5b"/>
                             <constraint firstAttribute="leadingMargin" secondItem="b3T-8i-tln" secondAttribute="leading" id="tBY-eB-OKv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G8p-RE-588"/>
+                                <exclude reference="Svo-VY-pvs"/>
+                                <exclude reference="eVQ-lD-LAF"/>
+                                <exclude reference="mao-wG-8JS"/>
+                                <exclude reference="nHy-Fu-Mjb"/>
+                                <exclude reference="Yef-iz-DFC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="Ztl-cM-jKn"/>
                     <connections>
@@ -588,6 +610,8 @@
         <image name="BUTTON" width="117" height="113"/>
         <image name="PokedexSplashPage" width="1080" height="1980"/>
         <image name="TESTINGSCREEN" width="1080" height="1980"/>
+        <image name="addlocationbutton" width="535" height="74"/>
+        <image name="addpokemonbutton" width="535" height="74"/>
         <image name="pokeballbutton" width="168" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
