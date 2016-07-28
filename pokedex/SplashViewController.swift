@@ -14,6 +14,7 @@ import CoreData
 class SplashViewController: UIViewController {
     
     @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var pokedexButton: UIButton!
     var player: AVAudioPlayer?
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -23,7 +24,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         print("> splashcontroller viewDidLoad")
         playSound()
-        
+        displayEffects()
         readPokemons()
         validatePokemons()
     }
@@ -33,6 +34,27 @@ class SplashViewController: UIViewController {
     }
     override func viewWillDisappear(animated: Bool) {
         playPikachu()
+    }
+    func displayEffects() {
+        if (checkButton != nil) {
+            checkButton.layer.shadowColor = UIColor.blackColor().CGColor
+            checkButton.layer.shadowOpacity = 1
+            checkButton.layer.shadowOffset = CGSizeZero
+            checkButton.layer.shadowRadius = 10
+            
+            pokedexButton.layer.shadowColor = UIColor.blackColor().CGColor
+            pokedexButton.layer.shadowOpacity = 1
+            pokedexButton.layer.shadowOffset = CGSizeZero
+            pokedexButton.layer.shadowRadius = 10
+            pokedexButton.alpha = 0
+            
+            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.pokedexButton.alpha = 1
+                }, completion: nil)
+        }
+        
+        
+        
     }
     
     func playSound() {
@@ -76,6 +98,18 @@ class SplashViewController: UIViewController {
 
     @IBAction func checkButtonPressed(sender: UIButton) {
 //        playPikachu()
+        let bounds = self.checkButton.bounds
+        UIView.animateWithDuration(4.0, delay: 2.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .Repeat, animations: {
+            self.checkButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+            self.checkButton.enabled = false
+            }, completion: nil)
+    }
+    @IBAction func pokedexButtonPressed(sender: UIButton) {
+        let bounds = self.pokedexButton.bounds
+        UIView.animateWithDuration(4.0, delay: 2.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .Repeat, animations: {
+            self.pokedexButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+            self.pokedexButton.enabled = false
+            }, completion: nil)
     }
     
     func getPokemons() {

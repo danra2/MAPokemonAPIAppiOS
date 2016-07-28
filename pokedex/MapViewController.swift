@@ -38,6 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         fetchAllLocations()
         mapPokemons()
         displayAddOrTapView()
+        buttonEffect()
         
         print("Received index#: \(index)")
         print("Received CP: \(cp)")
@@ -57,6 +58,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapPokemons()
         displayAddOrTapView()
     }
+    func buttonEffect() {
+        if (addButton != nil) {
+            addButton.layer.shadowColor = UIColor.blackColor().CGColor
+            addButton.layer.shadowOpacity = 1
+            addButton.layer.shadowOffset = CGSizeZero
+            addButton.layer.shadowRadius = 10
+            addButton.alpha = 0
+            
+            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.addButton.alpha = 1
+                }, completion: nil)
+        }
+    }
     func displayAddOrTapView() {
         if index != 0 {
             let imageUrl = "https://pokeapi.co/media/sprites/pokemon/" + String(index) + ".png"
@@ -71,9 +85,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             pokemonImage.hidden = true
             cpLabel.hidden = true
             addButton.hidden = true
+            
         }
 
     }
+
+
+
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
@@ -123,7 +141,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var label: UILabel!
     @IBAction func addPokemonButton(sender: UIButton) {
-        label.text = currentLat + ", " + currentLong
+        label.text = currentLat + "Successfully saved location at , " + currentLong
         
 //        let pokemonLat:CLLocationDegrees = Double(currentLat)!
 //        let pokemonLong:CLLocationDegrees = Double(currentLong)!

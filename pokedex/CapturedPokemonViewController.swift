@@ -25,8 +25,11 @@ class CapturedPokemonViewController: UIViewController, UICollectionViewDataSourc
         super.viewDidLoad()
         deleteButton.hidden = true
         readPokemons()
+        buttonEffect()
         view.backgroundColor = UIColor.redColor()
         print("CapturedPokemonViewController viewDidLoad")
+        
+        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,6 +39,19 @@ class CapturedPokemonViewController: UIViewController, UICollectionViewDataSourc
         view.backgroundColor = UIColor.redColor()
         print("CapturedPokemonViewController viewWillAppear")
         
+    }
+    func buttonEffect() {
+        if (deleteButton != nil) {
+            deleteButton.layer.shadowColor = UIColor.blackColor().CGColor
+            deleteButton.layer.shadowOpacity = 1
+            deleteButton.layer.shadowOffset = CGSizeZero
+            deleteButton.layer.shadowRadius = 4
+            deleteButton.alpha = 0
+            
+            UIView.animateWithDuration(3.3, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.deleteButton.alpha = 1
+                }, completion: nil)
+        }
     }
     
     func readPokemons() {
@@ -64,31 +80,25 @@ class CapturedPokemonViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CollectionViewCell
         cell.cellLabel.text = capturedPokemons[indexPath.row].name
-     
         
         let imageUrl = "https://pokeapi.co/media/sprites/pokemon/" + String(Int(capturedPokemons[indexPath.row].index!)) + ".png"
         let myImage =  UIImage(data: NSData(contentsOfURL: NSURL(string:imageUrl)!)!)
         
         cell.cellImage.image = myImage
        
-        
-        
-        
         return cell
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("Tapped a pokemon")
         nameLabel.backgroundColor = UIColor.redColor()
-        nameLabel.text = "\(indexPath.row+1) \(capturedPokemons[indexPath.row].name!) CP: \(capturedPokemons[indexPath.row].cp!) \(capturedPokemons[indexPath.row].createdAt!)"
+        nameLabel.text = "#\(indexPath.row+1): \(capturedPokemons[indexPath.row].name!) / CP: \(capturedPokemons[indexPath.row].cp!) \n \(capturedPokemons[indexPath.row].createdAt!)"
         nameLabel.hidden = false
         deleteButton.hidden = false
         if (previousIndex != nil) {
-            collectionView.cellForItemAtIndexPath(previousIndex!)?.backgroundColor = UIColor.redColor()
+            collectionView.cellForItemAtIndexPath(previousIndex!)?.backgroundColor = UIColor.clearColor()
         }
         collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.redColor()
         previousIndex = indexPath
-
-        
     }
     
     @IBAction func homeButtonPressed(sender: UIBarButtonItem) {
@@ -107,6 +117,8 @@ class CapturedPokemonViewController: UIViewController, UICollectionViewDataSourc
                 print("\(error)")
             }
         }
+        deleteButton.hidden = true
+        nameLabel.hidden = true
         collectionView.reloadData()
     }
     
