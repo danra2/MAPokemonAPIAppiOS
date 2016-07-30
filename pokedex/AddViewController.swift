@@ -16,6 +16,7 @@ class AddViewController: SplashViewController, UIPickerViewDelegate, UIPickerVie
     @IBAction func textFieldChanged(sender: UITextField) {
         searchText = textField.text?.lowercaseString
         print(searchText!)
+        self.hideKeyboardWhenTappedAround()
         let filteredArray = pokemons.filter() {
             guard let type = ($0 as Pokemon).name else {
                 return false
